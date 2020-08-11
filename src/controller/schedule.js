@@ -1,6 +1,6 @@
 
 //controller should handle the interaction with database.....
-const getList = (_date) => {
+const getScheduleList = (_date, _user) => {
     // This section should interact with database....
     //Now we can retun the fake data 
     return [
@@ -34,8 +34,20 @@ const NewShcedule = (schedule_NEW = {}) => {
     }
 }
 
+const DeleteShcedule = (_date, _user) => {
+    //It should contaon date, scheduleContent, createTime, user
+    return {
+        id: 2222,
+        date: 'dd2-MM2-yyy2',
+        schedule: "This is one of the  schdule",
+        createTime: "123132132132132132",
+        user: 'Li'
+    }
+}
+
 
 module.exports = {
-    getList,
-    NewShcedule
+    getScheduleList,
+    NewShcedule,
+    DeleteShcedule
 }
