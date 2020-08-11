@@ -12,9 +12,7 @@ const errorMsg_DELETE = 'WRONG! THE SCHDULE CANNNOT BE DELETED'
 
 
 const handleSchedule = (req, res) => {
-
     // 这里面无非就是两种，一种是post。。我要往数据库里添加schedule
-
     if (req.method === 'POST' && req.path === '/api/schedule/new') {
         //handle POSTDATA BY CHUNK by promise.....
         const scheduleData = req.body
@@ -27,7 +25,6 @@ const handleSchedule = (req, res) => {
             new ErrorModel('', errorMsg_NEW)
         return returnData
     }
-
 
     if (req.method === 'POST' && req.path === '/api/schedule/delete') {
         return {
