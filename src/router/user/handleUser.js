@@ -1,5 +1,6 @@
 const { SuccessModel, ErrorModel } = require('../../model/resModel')
 const { SignUp, Login } = require('../../controller/user')
+
 const susMsg_SIGNUP = 'NOW THE SCHEDULE JUST SIGNED UP'
 const errorMsg_SIGNUP = 'WORONG! THE SCHDULE CANNNOT BE SIGNED UP'
 const susMsg_LOGIN = 'WELCOME TO OUR HOME-MANAGER-APP'
