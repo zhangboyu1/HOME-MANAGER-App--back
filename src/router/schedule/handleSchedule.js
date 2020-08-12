@@ -44,6 +44,7 @@ const handleSchedule = (req, res) => {
         const date = req.query.date || ''
         const user = req.query.user || ''
         return getScheduleList(date, user).then(listResult => {
+            console.log('Now list data is:')
             console.log(listResult)
             return listResult.length ?
                 new SuccessModel(listResult, susMsg_LIST)
