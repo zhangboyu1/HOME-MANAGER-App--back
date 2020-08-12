@@ -25,22 +25,23 @@ serverHandle = (req, res) => {
 
     //We need to get the Query
     req.query = querystring.parse(url.split('?')[1])
-
-    handlePostData(req).then(postData => {
-        req.body = postData
-        const scheduleData = handleSchedule(req, res)
-        if (scheduleData) {
-            res.end(
-                JSON.stringify(scheduleData)
-            )
+    handlePostData(req).then(_postData => {
+        req.body = _postData
+        let scheduleresult_returnToClient = handleSchedule(req, res)
+        if (scheduleresult_returnToClient) {
+            console.log('-------------Now return to client---------------')
+            console.log(scheduleresult_returnToClient)
+            scheduleresult_returnToClient.then(_result_ControlReturn => {
+                res.end(JSON.stringify(result_ControlReturn))
+            })
             return
         }
 
-        const userData = handleUser(req, res)
-        if (userData) {
-            res.end(
-                JSON.stringify(userData)
-            )
+        const userRes_returnToClient = handleUser(req, res)
+        if (userRes_returnToClient) {
+            userRes_returnToClient.then(_result_ControlReturn => {
+                res.end(JSON.stringify(_result_ControlReturn))
+            })
             return
         }
 

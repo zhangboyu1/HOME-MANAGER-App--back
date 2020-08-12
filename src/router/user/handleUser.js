@@ -10,29 +10,25 @@ const handleUser = (req, res) => {
     // 这里面无非就是两种，一种是post。。我要往数据库里添加schedule
     if (req.path === '/api/user/signup') {
         const signUpData = req.body
-        const { userName, passwprd, firstName, lastName, title } = signUpData
-        const signUpResult = SignUp(userName, passwprd, firstName, lastName, title)
-        const returnData = signUpResult !== {} ?
-            new SuccessModel(signUpResult, susMsg_SIGNUP)
-            :
-            new ErrorModel('', errorMsg_SIGNUP)
-        return returnData
+        return SignUp(signUpData).then(_resultFromDatabase => {
+            console.log(_resultFromDatabase)
+            return _resultFromDatabase.insertId != 0 ?
+                new SuccessModel(_resultFromDatabase.insertId, susMsg_SIGNUP)
+                :
+                new ErrorModel([], errorMsg_SIGNUP)
+        })
     }
 
     if (req.path === '/api/user/login') {
-        const loginUpData = req.body
-        const { userName, passwprd } = loginUpData
-        const logInResult = Login(userName, passwprd)
-        const returnData = logInResult !== {} ?
-            new SuccessModel(logInResult, susMsg_LOGIN)
-            :
-            new ErrorModel('', errorMsg_LOGIN)
-        return returnData
-
-
+        const loginCheckData = req.body
+        return Login(loginCheckData).then(_resultFromDatabase => {
+            return _resultFromDatabase.length ?
+                new SuccessModel(_resultFromDatabase, susMsg_LOGIN)
+                :
+                new ErrorModel(_resultFromDatabase, errorMsg_LOGIN)
+        })
     }
 }
-
 
 
 module.exports = handleUser
