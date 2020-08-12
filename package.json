@@ -4,14 +4,18 @@
   "description": "",
   "main": "normal.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=dev nodemon ./www.js",
+    "prd": "cross-env NODE_ENV=production nodemon ./www.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "loadash": "^1.0.0"
+    "loadash": "^1.0.0",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "nodemon": "^2.0.4"
   }
 }
