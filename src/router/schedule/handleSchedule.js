@@ -9,6 +9,11 @@ const susMsg_DELETE = 'NOW THE SCHEDULE CAN BE DELETED'
 const errorMsg_DELETE = 'WRONG! THE SCHDULE CANNNOT BE DELETED'
 
 
+// const loginCheck = (req) => {
+
+// }
+
+
 const handleSchedule = (req, res) => {
     // 这里面无非就是两种，一种是post。。我要往数据库里添加schedule
     if (req.method === 'POST' && req.path === '/api/schedule/new') {
