@@ -3,7 +3,6 @@ const { exec } = require('../db/mysql')
 const Login = (_loginCheckData) => {
     //应该是去对应的Sign-up表中去查找
     const { userName, password } = _loginCheckData;
-
     let sql = `select users_EMAIL, users_FIRSTNAME, users_LASTNAME from users where users_EMAIL='${userName}' and users_PASSWORD='${password}'`
     return exec(sql)
 }
@@ -17,7 +16,6 @@ const SignUp = (_SignUpInfo) => {
         `('${userName}', '${password}', '${firstName}', '${lastName}', '${title}',${users_CREATETIME});`
     return exec(sql)
 }
-
 
 
 module.exports = {

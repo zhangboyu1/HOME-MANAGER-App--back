@@ -6,6 +6,7 @@ const { port, host } = REDIS_CONF
 const client = redis.createClient(port, host);
 client.on("error", (err, result) => {
     if (err) {
+        console.log(err)
         return
     }
 });
