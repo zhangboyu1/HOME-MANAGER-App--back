@@ -3,27 +3,35 @@ const handleUser = require('./src/router/user/handleUser')
 const querystring = require('querystring')
 
 const { get, set } = require('./src/db/redis')
+const { Login } = require('./src/controller/user')
 
 
 const handlePostData = (req) => {
     promise = new Promise((resolve, reject) => {
+        console.log('handle post data')
         let postData = ''
-        req.method !== 'POST' && req.headers['content-type'] != 'application/json'
-            && resolve('')
-            || (req.on('data', chunk => {
-                console.log('adasdas')
-                postData += chunk.toString()
-            }) && req.on('end', () => {
-                postData && resolve(JSON.parse(postData))
-            }))
+        req.method !== 'POST' && resolve('')
+        req.method === 'POST' && (req.on('data', chunk => {
+            console.log('adasdas')
+
+            postData += chunk.toString()
+        }) && req.on('end', () => {
+            postData && resolve(JSON.parse(postData))
+        }))
     })
     return promise
 }
 
 // 再搞一个函数同来获取过期时间。。。
-const getCookieExpires = () => {
+const setCookieExpires = () => {
     const d = new Date();
     d.setTime(d.getTime() + (24 * 60 * 60 * 1000))
+    return d.toGMTString()
+}
+
+const letCokkieExpireNow = () => {
+    const d = new Date();
+    d.setTime(d.getTime())
     return d.toGMTString()
 }
 
@@ -39,6 +47,9 @@ serverHandle = (req, res, err) => {
     req.path = url.split('?')[0].trim()
     //We need to get the Query
     req.query = querystring.parse(url.split('?')[1])
+    console.log(req.path)
+    console.log(req.method)
+    // console.log(req.headers)
 
     // get the cookie
     req.cookie = {}
@@ -56,6 +67,8 @@ serverHandle = (req, res, err) => {
     let needSetCookie = false;
     let SESSION_DATA = {};
     let userId = req.cookie.userId
+    console.log('cookie us :', userId)
+    // if (req.path === '/api/user/login') {
     if (userId) {
         // 尝试这个区redius库里查找。。
         if (!SESSION_DATA[userId]) {
@@ -72,9 +85,12 @@ serverHandle = (req, res, err) => {
     // console.log()
     console.log(SESSION_DATA)
     console.log('now the session is:', req.session)
+    // }
+
 
     handlePostData(req).then(_postData => {
         req.body = _postData
+        console.log(_postData)
         let scheduleresult_returnToClient = handleSchedule(req, res)
         if (scheduleresult_returnToClient) {
             console.log('-------------Now return to client---------------')
@@ -91,15 +107,16 @@ serverHandle = (req, res, err) => {
                 console.log(_result_ControlReturn)
                 // console.log(_result_ControlReturn)
                 if (_result_ControlReturn.data.users_EMAIL) { //only can login set the cookie....
-                    const expireDate = getCookieExpires()
-                    if (needSetCookie) {
-                        console.log('need to re-set the cookie')
-                        //就在这里把session写入redis中： 
-                        set(userId, req.session)
-                        res.setHeader('Set-Cookie', `userId=${userId};path = /; httpOnly; expires=${expireDate}`)
-                    }
+                    const expireDate = setCookieExpires()
+                    console.log('need to re-set the cookie')
+                    //就在这里把session写入redis中： 
+                    set(userId, _result_ControlReturn.data)
+                    res.setHeader('Set-Cookie', `userId=${userId};path = /; httpOnly; expires=${expireDate}`)
+                    res.end(JSON.stringify(_result_ControlReturn))
+                    return
                 }
-                res.setHeader('Set-Cookie', `userId=${userId};path = /; httpOnly; expires=${Date.now()}`)
+                const expireNow = letCokkieExpireNow()
+                res.setHeader('Set-Cookie', `userId=${userId}; path = /; httpOnly; expires=${expireNow}`)
                 res.end(JSON.stringify(_result_ControlReturn))
             })
             return

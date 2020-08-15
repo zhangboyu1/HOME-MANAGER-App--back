@@ -5,8 +5,8 @@ const getScheduleList = (_date, _user) => {
     //Now we can retun the fake data 
     console.log('now it starts to exc the sql with database')
     console.log(_date, _user)
-    let sql = 'select * from schedules where 1=1';
-    _date && _user && (sql += ` and schedules_DATE='${_date}' and user='${_user}' order by schedules_CREATETIME;`)
+
+    let sql = `SELECT schedules_CONTENT, schedules_DATE FROM SCHEDULES WHERE schedules_DATE='${_date}' AND user='${_user}' ORDER BY schedules_CREATETIME;`
     console.log(sql)
     return exec(sql) // return this promise
 }
