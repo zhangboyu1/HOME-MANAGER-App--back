@@ -5,8 +5,7 @@ const getScheduleList = (_date, _user) => {
     //Now we can retun the fake data 
     console.log('now it starts to exc the sql with database')
     console.log(_date, _user)
-
-    let sql = `SELECT schedules_CONTENT, schedules_DATE FROM SCHEDULES WHERE schedules_DATE='${_date}' AND user='${_user}' ORDER BY schedules_CREATETIME;`
+    let sql = `SELECT schedules_CONTENT, schedules_DATE FROM SCHEDULES WHERE schedules_DATE='${_date}' AND user='${_user}' AND state=1 ORDER BY schedules_CREATETIME;`
     console.log(sql)
     return exec(sql) // return this promise
 }
@@ -22,16 +21,23 @@ const NewShcedule = (_schedule_NEW = {}) => {
 
 const DeleteShcedule = (_deleteSheculde) => {
     //It should contaon date, user
-    const { date, user } = _deleteSheculde
+    const { date, user, content } = _deleteSheculde
     // here we use sofe delete.....by changing the state...
-    let sql = `UPDATE SCHEDULES SET state=0 WHERE schedules_DATE='${date}' and user='${user}';`
-    console.log(sql)
+    let sql = `UPDATE SCHEDULES SET state=0 WHERE schedules_DATE='${date}' and user='${user}' and schedules_CONTENT='${content}';`
     return exec(sql) // return this promise
+}
+
+
+const getScheduleAll = (_user) => {
+
+    let sql = `SELECT schedules_DATE FROM SCHEDULES WHERE user='${_user}' AND state=1 ORDER BY schedules_CREATETIME;`
+    return exec(sql)
 }
 
 
 module.exports = {
     getScheduleList,
     NewShcedule,
-    DeleteShcedule
+    DeleteShcedule,
+    getScheduleAll
 }
