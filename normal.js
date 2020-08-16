@@ -16,6 +16,8 @@ const handlePostData = (req) => {
 
             postData += chunk.toString()
         }) && req.on('end', () => {
+
+            console.log(postData)
             postData && resolve(JSON.parse(postData))
         }))
     })
@@ -87,7 +89,6 @@ serverHandle = (req, res, err) => {
     console.log('now the session is:', req.session)
     // }
 
-
     handlePostData(req).then(_postData => {
         req.body = _postData
         console.log(_postData)
@@ -115,6 +116,7 @@ serverHandle = (req, res, err) => {
                     res.end(JSON.stringify(_result_ControlReturn))
                     return
                 }
+
                 const expireNow = letCokkieExpireNow()
                 res.setHeader('Set-Cookie', `userId=${userId}; path = /; httpOnly; expires=${expireNow}`)
                 res.end(JSON.stringify(_result_ControlReturn))
