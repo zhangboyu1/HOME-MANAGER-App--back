@@ -49,14 +49,13 @@ const handleUser = (req, res) => {
         return Login(loginCheckData).then(_resultFromDatabase => {
             //如果数据库中有这个数据的话。。。则把username 和firstname存入session中
             console.log('IT would be the first time to start the login in from the mysql database....')
+            if (!_resultFromDatabase.length) {
+                return new ErrorModel(_resultFromDatabase, errorMsg_LOGIN)
+            }
+
             req.session.username = _resultFromDatabase[0].users_EMAIL;
             req.session.firstname = _resultFromDatabase[0].users_FIRSTNAME;
-
-            console.log("req.session", req.session)
-            return _resultFromDatabase.length ?
-                new SuccessModel(_resultFromDatabase[0], susMsg_LOGIN)
-                :
-                new ErrorModel(_resultFromDatabase, errorMsg_LOGIN)
+            return new SuccessModel(_resultFromDatabase[0], susMsg_LOGIN)
         })
     }
 

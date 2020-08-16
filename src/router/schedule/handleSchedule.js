@@ -1,4 +1,4 @@
-const { getScheduleList, NewShcedule, DeleteShcedule } = require('../../controller/schedule')
+const { getScheduleList, NewShcedule, DeleteShcedule, getScheduleAll } = require('../../controller/schedule')
 const { SuccessModel, ErrorModel } = require('../../model/resModel')
 
 const susMsg_LIST = 'NOW THE SCHEDULE CAN BE VIEW'
@@ -8,6 +8,8 @@ const errorMsg_NEW = 'WORNG! THE SCHDULE CANNOT BE A NEW ONE '
 const susMsg_DELETE = 'NOW THE SCHEDULE CAN BE DELETED'
 const errorMsg_DELETE = 'WRONG! THE SCHDULE CANNNOT BE DELETED'
 const errorMsg_LOGIN = 'WORNG! CANNOT BE LOGINED IN'
+const susMsg_ALL = 'PLEASE VIEW ALL THE SCHEDULED DATES!'
+const errorMsg_ALL = 'NO SHCEDULE YET!'
 
 const { get } = require('../../db/redis.js')
 
@@ -32,15 +34,6 @@ const handleSchedule = (req, res) => {
 
     // 这里面无非就是两种，一种是post。。我要往数据库里添加schedule
     if (req.method === 'POST' && req.path === '/api/schedule/new') {
-        //handle POSTDATA BY CHUNK by promise.....
-        // 每次新建schedule的时候。。。需要。做登录验证。。。。
-        // const loginCheckRsult = loginCheck(req)
-        // if (loginCheckRsult) {
-        //     console.log('User need to login')
-        //     console.log(loginCheckRsult)
-        //     return loginCheckRsult
-        // }
-
         const newSchdule = req.body
         // console.log(newSchdule)
         return NewShcedule(newSchdule).then((result_returnFromDataBase) => {
@@ -77,6 +70,19 @@ const handleSchedule = (req, res) => {
                 new SuccessModel(listResult, susMsg_LIST)
                 :
                 new ErrorModel(listResult, errorMsg_LIST)
+        })
+    }
+
+    if (req.method === 'GET' && req.path === '/api/schedule/all') {
+        //OK 现在这个查看接口是调通了。。。//
+        const user = req.query.user || ''
+        return getScheduleAll(user).then(listResult => {
+            console.log('Now list data is:')
+            console.log(listResult)
+            return listResult.length ?
+                new SuccessModel(listResult, susMsg_ALL)
+                :
+                new ErrorModel(listResult, errorMsg_ALL)
         })
     }
 }
