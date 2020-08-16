@@ -13,23 +13,6 @@ const errorMsg_ALL = 'NO SHCEDULE YET!'
 
 const { get } = require('../../db/redis.js')
 
-// const loginCheck = (req) => {
-//     // console.log(req.session)
-//     console.log('开始logincheck了。。。')
-//     // const userId = req.cookie.userId
-//     //直接从req。session中取。。。。
-//     console.log(req.session)
-//     if (!req.session.username) {
-//         console.log('接下来要给normal.js返回一个promise')
-//         return Promise.resolve(
-//             new ErrorModel({}, errorMsg_LOGIN)
-//         )
-//     }
-// }
-
-// 这个loginCheck实际上就是要看这个cookie的值是否满足条件。。。
-//而这个logincheck，则是查看后端收到的cookie中是否包含有这个userName......
-
 const handleSchedule = (req, res) => {
 
     // 这里面无非就是两种，一种是post。。我要往数据库里添加schedule
