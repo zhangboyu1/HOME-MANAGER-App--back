@@ -28,5 +28,6 @@ function exec(sql) {    //这里定义的这个exec函数相当于是一个全�
 }
 
 module.exports = {
-    exec
+    exec,
+    escape: mysql.escape
 }
