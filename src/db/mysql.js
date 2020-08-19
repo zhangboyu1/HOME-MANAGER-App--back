@@ -5,11 +5,9 @@ const con = mysql.createConnection(MYSQL_CONF)
 
 con.connect((err, result) => {
     if (err) {
-        console.log(err)
+        throw new Error(err)
         return
     }
-    console.log("The Database has been conntected!!!")
-    console.log("__________________________________________")
 });
 
 
@@ -18,7 +16,7 @@ function exec(sql) {    //这里定义的这个exec函数相当于是一个全�
         con.query(sql, (err, result) => { // 通过con.query 来和数据库交流
             // console.log(err)
             if (err) {
-                console.log(err)
+                throw new Error(err)
             }
             console.log('------------EXEC----------------')
             resolve(result)

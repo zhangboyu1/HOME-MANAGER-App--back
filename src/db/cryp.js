@@ -3,7 +3,6 @@ const crypto = require(`crypto`)
 
 // keydsadsads
 const SECRET_KEY = "BoYu_111#"
-
 function md5(content) {
     let md5 = crypto.createHash('md5')
     return md5.update(content).digest('hex')

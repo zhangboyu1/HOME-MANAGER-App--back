@@ -15,7 +15,6 @@ const { get } = require('../../db/redis.js')
 const handleUser = (req, res) => {
     // 这里面无非就是两种，一种是post。。我要往数据库里添加schedule
     if (req.method === 'POST' && req.path === '/api/user/signup') {
-        console.log('start signup????')
         const signUpData = req.body
         return SignUp(signUpData).then(_resultFromDatabase => {
 
@@ -34,10 +33,7 @@ const handleUser = (req, res) => {
         // 现在Redis中查找、、如果有这个Id的话。。就不继续从数据库中查找了。。。
         if (req.cookie.userId) {
             return get(req.cookie.userId).then(_resultFromRedis => {
-                console.log(_resultFromRedis)
-                console.log('The user has already has the history in login in this application')
                 req.session = _resultFromRedis
-                console.log('now the SESSION is', _resultFromRedis)
                 if (_resultFromRedis != {}) {
                     return new SuccessModel(_resultFromRedis, susMsg_LOGIN)
                 }
@@ -46,7 +42,6 @@ const handleUser = (req, res) => {
 
         return Login(loginCheckData).then(_resultFromDatabase => {
             //如果数据库中有这个数据的话。。。则把username 和firstname存入session中
-            console.log('IT would be the first time to start the login in from the mysql database....')
             if (!_resultFromDatabase.length) {
                 return new ErrorModel(_resultFromDatabase, errorMsg_LOGIN)
             }
@@ -60,7 +55,6 @@ const handleUser = (req, res) => {
         if (req.cookie.userId) {
             return get(req.cookie.userId).then(_resultFromRedis => {
                 req.session = _resultFromRedis
-                console.log('now the SESSION is', _resultFromRedis)
                 if (req.session != {}) {
                     return new SuccessModel({}, susMsg_LOGOUT)
                 }
@@ -71,7 +65,6 @@ const handleUser = (req, res) => {
     if (req.method === 'POST' && req.path === '/api/user/profile') {
         const profileData = req.body
         return AddProfile(profileData).then(_resultFromDatabase => {
-            console.log("updated profile would be :", _resultFromDatabase)
             return _resultFromDatabase.changedRows ?
                 new SuccessModel(_resultFromDatabase.changedRows, susMsg_UPDATE)
                 :

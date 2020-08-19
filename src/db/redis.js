@@ -6,14 +6,13 @@ const { port, host } = REDIS_CONF
 const client = redis.createClient(port, host);
 client.on("error", (err, result) => {
     if (err) {
-        console.log(err)
+        throw new Error(err)
         return
     }
 });
 
 client.on('ready', function () {
     redisIsReady = true;
-    console.log('redis is running');
 });
 
 function set(key, value) {
@@ -33,7 +32,7 @@ function get(key) {
             console.log(val)
             if (err) {
                 reject(err)
-                console.log(err)
+                throw new Error(err)
                 return
             }
             if (val === null) {
