@@ -1,0 +1,48 @@
+Error: This is the error url
+    at Server.serverHandle (/Users/zhangboyu/newStart/nodePractice/NodePractice/HOME-MANAGER-App-back/normal.js:57:15)
+    at Server.emit (events.js:315:20)
+    at Server.<anonymous> (/usr/local/lib/node_modules/pm2/node_modules/@pm2/io/build/main/metrics/httpMetrics.js:166:33)
+    at parserOnIncoming (_http_server.js:790:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)
+Error: This is the error url
+    at Server.serverHandle (/Users/zhangboyu/newStart/nodePractice/NodePractice/HOME-MANAGER-App-back/normal.js:57:15)
+    at Server.emit (events.js:315:20)
+    at Server.<anonymous> (/usr/local/lib/node_modules/pm2/node_modules/@pm2/io/build/main/metrics/httpMetrics.js:166:33)
+    at parserOnIncoming (_http_server.js:790:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)
+Error: This is the error url
+    at Server.serverHandle (/Users/zhangboyu/newStart/nodePractice/NodePractice/HOME-MANAGER-App-back/normal.js:57:15)
+    at Server.emit (events.js:315:20)
+    at Server.<anonymous> (/usr/local/lib/node_modules/pm2/node_modules/@pm2/io/build/main/metrics/httpMetrics.js:166:33)
+    at parserOnIncoming (_http_server.js:790:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)
+Error: This is the error url
+    at Server.serverHandle (/Users/zhangboyu/newStart/nodePractice/NodePractice/HOME-MANAGER-App-back/normal.js:57:15)
+    at Server.emit (events.js:315:20)
+    at Server.<anonymous> (/usr/local/lib/node_modules/pm2/node_modules/@pm2/io/build/main/metrics/httpMetrics.js:166:33)
+    at parserOnIncoming (_http_server.js:790:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)
+Error: This is the error url
+    at Server.serverHandle (/Users/zhangboyu/newStart/nodePractice/NodePractice/HOME-MANAGER-App-back/normal.js:57:15)
+    at Server.emit (events.js:315:20)
+    at Server.<anonymous> (/usr/local/lib/node_modules/pm2/node_modules/@pm2/io/build/main/metrics/httpMetrics.js:166:33)
+    at parserOnIncoming (_http_server.js:790:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)
+Error: This is the error url
+    at Server.serverHandle (/Users/zhangboyu/newStart/nodePractice/NodePractice/HOME-MANAGER-App-back/normal.js:57:15)
+    at Server.emit (events.js:315:20)
+    at Server.<anonymous> (/usr/local/lib/node_modules/pm2/node_modules/@pm2/io/build/main/metrics/httpMetrics.js:166:33)
+    at parserOnIncoming (_http_server.js:790:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)
+Error: This is the error url
+    at Server.serverHandle (/Users/zhangboyu/newStart/nodePractice/NodePractice/HOME-MANAGER-App-back/normal.js:57:15)
+    at Server.emit (events.js:315:20)
+    at Server.<anonymous> (/usr/local/lib/node_modules/pm2/node_modules/@pm2/io/build/main/metrics/httpMetrics.js:166:33)
+    at parserOnIncoming (_http_server.js:790:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)
+Error: This is the error url
+    at Server.serverHandle (/Users/zhangboyu/newStart/nodePractice/NodePractice/HOME-MANAGER-App-back/normal.js:57:15)
+    at Server.emit (events.js:315:20)
+    at Server.<anonymous> (/usr/local/lib/node_modules/pm2/node_modules/@pm2/io/build/main/metrics/httpMetrics.js:166:33)
+    at parserOnIncoming (_http_server.js:790:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)

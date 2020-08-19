@@ -5,8 +5,6 @@ const { generatePassword } = require('../db/cryp')
 const Login = (_loginCheckData) => {
     //应该是去对应的Sign-up表中去查找
     const { userName, password } = _loginCheckData;
-
-
     let sql = `select users_EMAIL, users_FIRSTNAME, users_LASTNAME, users_TITLE from users where users_EMAIL=${escape(userName)} and users_PASSWORD=${escape(generatePassword(password))}`
     console.log(sql)
     return exec(sql)
@@ -30,13 +28,9 @@ const SignUp = (_SignUpInfo) => {
             return exec(sql_INSERTUSER)
 
         } else {
-
-            console.log('the user has already registered in the database....')
             return exec(sql_QUERYUSER)
         }
-
     })
-    // 先查询，后insert。。这个怎么玩
 }
 
 

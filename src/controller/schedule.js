@@ -21,16 +21,13 @@ const NewShcedule = (_schedule_NEW = {}) => {
 }
 
 const DeleteShcedule = (_deleteSheculde) => {
-    //It should contaon date, user
     const { date, user, content } = _deleteSheculde
-    // here we use sofe delete.....by changing the state...
     let sql = `UPDATE SCHEDULES SET state=0 WHERE schedules_DATE='${xss(date)}' and user='${xss(user)}' and schedules_CONTENT='${xss(content)}';`
     return exec(sql) // return this promise
 }
 
 
 const getScheduleAll = (_user) => {
-
     let sql = `SELECT schedules_DATE FROM SCHEDULES WHERE 1=1 and user='${_user}' AND state=1 ORDER BY schedules_CREATETIME;`
     return exec(sql)
 }

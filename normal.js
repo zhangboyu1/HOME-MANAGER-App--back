@@ -1,24 +1,18 @@
 const handleSchedule = require('./src/router/schedule/handleSchedule')
 const handleUser = require('./src/router/user/handleUser')
 const querystring = require('querystring')
-
 const { get, set } = require('./src/db/redis')
 const { Login } = require('./src/controller/user')
-
 const { access } = require('./src/utils/log')
 
 
 const handlePostData = (req) => {
     promise = new Promise((resolve, reject) => {
-        console.log('handle post data')
         let postData = ''
         req.method !== 'POST' && resolve('')
         req.method === 'POST' && (req.on('data', chunk => {
-            console.log('adasdas')
-
             postData += chunk.toString()
         }) && req.on('end', () => {
-            console.log(postData)
             postData && resolve(JSON.parse(postData))
         }))
     })
@@ -38,28 +32,27 @@ const letCokkieExpireNow = () => {
     return d.toGMTString()
 }
 
+
 //解析session
 serverHandle = (req, res, err) => {
+    if (err) {
+        throw new Error('Handel server has error.....')
+    }
+
     // Record log....
+    const d2 = new Date();
+    const currentLogTime = d2.toString()
     access(`${req.method} -- ${req.url} -- ${req.headers['user-agent']}  /n
-    _________________________________________________________________________
-    ---${req.cookie && req.cookie.userId} --${Date.now()}
-    -------------------------------------------------------------------------
+    ---User: ${req.cookie ? req.cookie.userId : 'During Signup'} --- ${currentLogTime}
+    --------------------------------------------------------------------------------------
     `)
 
-
-
     res.setHeader('Content-type', 'application/json') //client side needs to analysing the data...
-    // get url and path is the common coding.....
-    // --------------------------------------------------------
-    if (err) {
-        console.error(err)
-    }
+
     const url = req.url.trim()
     req.path = url.split('?')[0].trim()
     //We need to get the Query
     req.query = querystring.parse(url.split('?')[1])
-    // console.log(req.headers)
     if (req.url.trim() === '/api/user/error') {
         throw new Error('This is the error url')
     }
@@ -69,6 +62,7 @@ serverHandle = (req, res, err) => {
     const cookieStr = req.headers.cookie || '';
     cookieStr.split(';').forEach(item => {
         if (!item) {
+            // throw new Error('There is no any cookie string...')
             return
         }
         const arr = item.split('=')
@@ -80,13 +74,9 @@ serverHandle = (req, res, err) => {
     let needSetCookie = false;
     let SESSION_DATA = {};
     let userId = req.cookie.userId
-    console.log('cookie us :', userId)
-    // if (req.path === '/api/user/login') {
     if (userId) {
-        // 尝试这个区redius库里查找。。
         if (!SESSION_DATA[userId]) {
             SESSION_DATA[userId] = {}
-            console.log('sessiondata 里啥都没有')
             // 这个时候就应该去对应的Redis中查找了。。
         }
     } else {
@@ -95,17 +85,11 @@ serverHandle = (req, res, err) => {
         SESSION_DATA[userId] = {}
     }
     req.session = SESSION_DATA[userId]
-    // console.log()
-    console.log(SESSION_DATA)
-    console.log('now the session is:', req.session)
-    // }
 
     handlePostData(req).then(_postData => {
         req.body = _postData
-        console.log(_postData)
         let scheduleresult_returnToClient = handleSchedule(req, res)
         if (scheduleresult_returnToClient) {
-            console.log('-------------Now return to client---------------')
             scheduleresult_returnToClient.then(_result_ControlReturn => {
                 res.end(JSON.stringify(_result_ControlReturn))
             })
@@ -115,12 +99,10 @@ serverHandle = (req, res, err) => {
         const userRes_returnToClient = handleUser(req, res)
         if (userRes_returnToClient) {
             userRes_returnToClient.then(_result_ControlReturn => {
-                console.log('Now we are at the view stage///////////////')
-                console.log(_result_ControlReturn)
+
                 // console.log(_result_ControlReturn)
                 if (_result_ControlReturn.data.users_EMAIL) { //only can login set the cookie....
                     const expireDate = setCookieExpires()
-                    console.log('need to re-set the cookie')
                     //就在这里把session写入redis中： 
                     set(userId, _result_ControlReturn.data)
                     res.setHeader('Set-Cookie', `userId=${userId};path = /; httpOnly; expires=${expireDate}`)
@@ -139,7 +121,6 @@ serverHandle = (req, res, err) => {
         res.end()
     })
     // ---------------------------------------------------------------
-    // Handle Schdeule:
 }
 
 module.exports = serverHandle
