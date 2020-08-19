@@ -46,3 +46,8 @@ Error: This is the error url
     at Server.<anonymous> (/usr/local/lib/node_modules/pm2/node_modules/@pm2/io/build/main/metrics/httpMetrics.js:166:33)
     at parserOnIncoming (_http_server.js:790:12)
     at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)
+You have triggered an unhandledRejection, you may have forgotten to catch a Promise rejection:
+TypeError: Promise.resolve is not a constructor
+    at handleSchedule (/Users/zhangboyu/newStart/nodePractice/NodePractice/HOME-MANAGER-App-back/src/router/schedule/handleSchedule.js:65:16)
+    at /Users/zhangboyu/newStart/nodePractice/NodePractice/HOME-MANAGER-App-back/normal.js:91:45
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
