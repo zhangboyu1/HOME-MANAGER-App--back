@@ -30,11 +30,13 @@ function get(key) {
     const promise = new Promise((resolve, reject) => {
         client.get(key, (err, val) => {
             console.log(val)
-            if (err) {
-                reject(err)
-                throw new Error(err)
-                return
-            }
+
+            // if (err) {
+            //     // reject(err)
+            //     throw new Error(err)
+            //     return
+            // }
+
             if (val === null) {
                 resolve(null)
             }
