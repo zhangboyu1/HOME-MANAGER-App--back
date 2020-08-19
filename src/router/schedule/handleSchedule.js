@@ -62,6 +62,7 @@ const handleSchedule = (req, res) => {
 
     if (req.method === 'GET' && req.path === '/') {
         //OK 现在这个查看接口是调通了。。。//
+        console.log("hit the rout /")
         return Promise.resolve(new SuccessModel('This is our app', susMsg_ALL))
     }
 }
