@@ -1,6 +1,6 @@
 const crypto = require(`crypto`)
 
-// key
+// The secretkey
 
 const SECRET_KEY = "BoYu_111#"
 
