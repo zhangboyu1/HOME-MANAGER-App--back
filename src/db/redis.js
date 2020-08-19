@@ -3,7 +3,60 @@ const { REDIS_CONF } = require('../db-CONFIG/db')
 const { port, host } = REDIS_CONF
 
 
-const client = redis.createClient(port, host);
+
+// const client = redis.createClient(port, host);
+// client.on("error", (err, result) => {
+//     if (err) {
+//         throw new Error(err)
+//         return
+//     }
+// });
+
+// client.on('ready', function () {
+//     redisIsReady = true;
+// });
+
+// function set(key, value) {
+//     if (typeof value === 'object') {
+//         value = JSON.stringify(value)
+//     }
+//     client.set(key, value, () => {
+//         redis.print
+//         console.log("ONE SEESION HAS BEEN INSERTED INTO THE REDIS")
+//     })
+// }
+
+
+// function get(key) {
+//     const promise = new Promise((resolve, reject) => {
+//         client.get(key, (err, val) => {
+//             console.log(val)
+
+//             // if (err) {
+//             //     // reject(err)
+//             //     throw new Error(err)
+//             //     return
+//             // }
+
+//             if (val === null) {
+//                 resolve(null)
+//             }
+//             try {
+//                 resolve(JSON.parse(val))
+//             } catch (ex) {
+//                 resolve(val)
+//             }
+//         })
+//     })
+//     return promise
+// }
+
+// module.exports = {
+//     set,
+//     get
+// }
+
+// const client = redis.createClient(port, host);
 // client.on("error", (err, result) => {
 // //     if (err) {
 // //         throw new Error(err)
@@ -11,25 +64,25 @@ const client = redis.createClient(port, host);
 //     }
 // });
 
-client.on('ready', function () {
-    redisIsReady = true;
-});
+// client.on('ready', function () {
+//     redisIsReady = true;
+// });
 
-function set(key, value) {
-    if (typeof value === 'object') {
-        value = JSON.stringify(value)
-    }
-    client.set(key, value, () => {
-        redis.print
-        console.log("ONE SEESION HAS BEEN INSERTED INTO THE REDIS")
-    })
-}
+// function set(key, value) {
+//     if (typeof value === 'object') {
+//         value = JSON.stringify(value)
+//     }
+//     client.set(key, value, () => {
+//         redis.print
+//         console.log("ONE SEESION HAS BEEN INSERTED INTO THE REDIS")
+//     })
+// }
 
 
-function get(key) {
-    const promise = new Promise((resolve, reject) => {
-        client.get(key, (err, val) => {
-            console.log(val)
+// function get(key) {
+//     const promise = new Promise((resolve, reject) => {
+//         client.get(key, (err, val) => {
+//             console.log(val)
 
             // if (err) {
             //     // reject(err)
@@ -37,20 +90,21 @@ function get(key) {
             //     return
             // }
 
-            if (val === null) {
-                resolve(null)
-            }
-            try {
-                resolve(JSON.parse(val))
-            } catch (ex) {
-                resolve(val)
-            }
-        })
-    })
-    return promise
-}
+//             if (val === null) {
+//                 resolve(null)
+//             }
+//             try {
+//                 resolve(JSON.parse(val))
+//             } catch (ex) {
+//                 resolve(val)
+//             }
+//         })
+//     })
+//     return promise
+// }
 
-module.exports = {
-    set,
-    get
-}
+// module.exports = {
+//     set,
+//     get
+// }
+
