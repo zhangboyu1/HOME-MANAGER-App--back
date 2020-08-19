@@ -4,12 +4,12 @@ const { port, host } = REDIS_CONF
 
 
 const client = redis.createClient(port, host);
-client.on("error", (err, result) => {
-//     if (err) {
-//         throw new Error(err)
-//         return
-    }
-});
+// client.on("error", (err, result) => {
+// //     if (err) {
+// //         throw new Error(err)
+// //         return
+//     }
+// });
 
 client.on('ready', function () {
     redisIsReady = true;
