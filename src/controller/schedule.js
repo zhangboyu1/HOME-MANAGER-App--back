@@ -1,4 +1,5 @@
 const { exec } = require('../db/mysql')
+const { xss } = require(`xss`)
 //controller should handle the interaction with database.....
 const getScheduleList = (_date, _user) => {
     // This section should interact with database....
@@ -15,7 +16,7 @@ const NewShcedule = (_schedule_NEW = {}) => {
     const { date, content, user } = _schedule_NEW
     const createTime = Date.now()
     let sql = 'INSERT INTO SCHEDULES (schedules_DATE, schedules_CONTENT, schedules_CREATETIME, `user`) VALUES ' +
-        `('${date}', '${content}', '${createTime}', '${user}');`
+        `('${xss(date)}', '${xss(content)} ', '${xss(createTime)} ', '${xss(user)}');`
     return exec(sql)
 }
 
@@ -23,14 +24,14 @@ const DeleteShcedule = (_deleteSheculde) => {
     //It should contaon date, user
     const { date, user, content } = _deleteSheculde
     // here we use sofe delete.....by changing the state...
-    let sql = `UPDATE SCHEDULES SET state=0 WHERE schedules_DATE='${date}' and user='${user}' and schedules_CONTENT='${content}';`
+    let sql = `UPDATE SCHEDULES SET state=0 WHERE schedules_DATE='${xss(date)}' and user='${xss(user)}' and schedules_CONTENT='${xss(content)}';`
     return exec(sql) // return this promise
 }
 
 
 const getScheduleAll = (_user) => {
 
-    let sql = `SELECT schedules_DATE FROM SCHEDULES WHERE user='${_user}' AND state=1 ORDER BY schedules_CREATETIME;`
+    let sql = `SELECT schedules_DATE FROM SCHEDULES WHERE 1=1 and user='${_user}' AND state=1 ORDER BY schedules_CREATETIME;`
     return exec(sql)
 }
 

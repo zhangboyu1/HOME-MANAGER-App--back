@@ -23,14 +23,14 @@ if (env === 'production') {
     MYSQL_CONF = {
         host: "localhost",
         user: "root",
-        password: "aa5135462",
-        database: 'HOMEMANAGER',
+        password: "zz5135462",
+        database: 'homemanger',
         insecureAuth: true
     };
 
     REDIS_CONF = {
         port: 6379,
-        host: '127.0.0.1'
+        host: "127.0.0.1"
     }
 }
 

@@ -5,6 +5,8 @@ const querystring = require('querystring')
 const { get, set } = require('./src/db/redis')
 const { Login } = require('./src/controller/user')
 
+const { access } = require('./src/utils/log')
+
 
 const handlePostData = (req) => {
     promise = new Promise((resolve, reject) => {
@@ -16,7 +18,6 @@ const handlePostData = (req) => {
 
             postData += chunk.toString()
         }) && req.on('end', () => {
-
             console.log(postData)
             postData && resolve(JSON.parse(postData))
         }))
@@ -39,19 +40,29 @@ const letCokkieExpireNow = () => {
 
 //解析session
 serverHandle = (req, res, err) => {
+    // Record log....
+    access(`${req.method} -- ${req.url} -- ${req.headers['user-agent']}  /n
+    _________________________________________________________________________
+    ---${req.cookie && req.cookie.userId} --${Date.now()}
+    -------------------------------------------------------------------------
+    `)
+
+
+
     res.setHeader('Content-type', 'application/json') //client side needs to analysing the data...
     // get url and path is the common coding.....
     // --------------------------------------------------------
     if (err) {
-        console.log(err)
+        console.error(err)
     }
     const url = req.url.trim()
     req.path = url.split('?')[0].trim()
     //We need to get the Query
     req.query = querystring.parse(url.split('?')[1])
-    console.log(req.path)
-    console.log(req.method)
     // console.log(req.headers)
+    if (req.url.trim() === '/api/user/error') {
+        throw new Error('This is the error url')
+    }
 
     // get the cookie
     req.cookie = {}
