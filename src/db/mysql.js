@@ -4,10 +4,10 @@ const { MYSQL_CONF } = require('../db-CONFIG/db')
 const con = mysql.createConnection(MYSQL_CONF)
 
 con.connect((err, result) => {
-//     if (err) {
-//         throw new Error(err)
-//         return
-//     }
+     if (err) {
+         throw new Error(err)
+         return
+     }
 });
 
 
