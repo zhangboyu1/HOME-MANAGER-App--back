@@ -9,7 +9,7 @@ if (env === 'dev') {
         user: "doadmin",
         password: "bxvs9216wxwvdudm",
         database: 'defaultdb',
-        connectTimeout: 30000,
+        connectTimeout: 300000,
         insecureAuth: true
     };
 
