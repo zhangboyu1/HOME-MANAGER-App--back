@@ -7,7 +7,7 @@ if (env === 'dev') {
     MYSQL_CONF = {
         host: "db-mysql-v1-29254-do-user-7904424-0.a.db.ondigitalocean.com",
         user: "doadmin",
-        password: "bc9wo4jeqd8af712",
+        password: "bxvs9216wxwvdudm",
         database: 'defaultdb',
         insecureAuth: true
     };
