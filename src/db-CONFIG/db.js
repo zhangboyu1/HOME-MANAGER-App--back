@@ -5,7 +5,7 @@ var REDIS_CONF
 
 if (env === 'dev') {
     MYSQL_CONF = {
-        host: "private-db-mysql-v1-29254-do-user-7904424-0.a.db.ondigitalocean.com",
+        host: "db-mysql-v1-29254-do-user-7904424-0.a.db.ondigitalocean.com",
         user: "doadmin",
         password: "bc9wo4jeqd8af712",
         database: 'defaultdb',
