@@ -5,10 +5,10 @@ var REDIS_CONF
 
 if (env === 'dev') {
     MYSQL_CONF = {
-        host: "localhost",
-        user: "root",
-        password: "zz5135462",
-        database: 'homemanger',
+        host: "db-mysql-v1-29254-do-user-7904424-0.a.db.ondigitalocean.com",
+        user: "doadmin",
+        password: "j8kg93g6a4o92506",
+        database: 'defaultdb',
         insecureAuth: true
     };
 
