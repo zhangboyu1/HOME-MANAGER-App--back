@@ -15,9 +15,13 @@ const { get } = require('../../db/redis.js')
 const handleUser = (req, res) => {
     // 这里面无非就是两种，一种是post。。我要往数据库里添加schedule
     if (req.method === 'POST' && req.path === '/api/user/signup') {
+
+        console.log('hit the signup')
         const signUpData = req.body
+
         return SignUp(signUpData).then(_resultFromDatabase => {
 
+            console.log(_resultFromDatabase)
             if (_resultFromDatabase[0]) {
                 return new ErrorModel(_resultFromDatabase, errorMsg_USERQUERY)
             }
