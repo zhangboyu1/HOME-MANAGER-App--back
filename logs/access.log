@@ -1,1 +1,233 @@
 
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:39:05 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:39:56 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:42:29 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:42:42 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:42:49 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:42:54 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:44:52 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:44:57 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/signup -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:45:06 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/signup -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:45:27 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/signup -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:45:43 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:45:51 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:46:06 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:47:17 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:49:13 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:49:21 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:49:31 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 12:49:37 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:03:11 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:03:18 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:04:31 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:04:43 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:04:59 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:05:05 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:06:28 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:06:42 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:20:34 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:31:33 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:31:42 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:33:02 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:33:16 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:38:44 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:38:56 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:47:22 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 13:47:35 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 14:55:12 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 14:55:22 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 14:56:19 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 14:56:39 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 20:21:29 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 20:30:57 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 20:31:07 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 20:31:11 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 20:59:46 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:02:49 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:06:30 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:07:18 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:07:33 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:11:07 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/logout -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:11:23 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+POST -- /api/user/login -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:11:32 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:11:36 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:13:00 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:15:21 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:15:38 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:19:26 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:23:00 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    
+GET -- /api/user/profile -- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36  /n
+    ---User: During Signup --- Sun Aug 23 2020 21:29:37 GMT+1000 (Australian Eastern Standard Time)
+    --------------------------------------------------------------------------------------
+    

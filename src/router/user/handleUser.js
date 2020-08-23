@@ -15,13 +15,10 @@ const { get } = require('../../db/redis.js')
 const handleUser = (req, res) => {
     // 这里面无非就是两种，一种是post。。我要往数据库里添加schedule
     if (req.method === 'POST' && req.path === '/api/user/signup') {
-
         console.log('hit the signup')
         const signUpData = req.body
 
         return SignUp(signUpData).then(_resultFromDatabase => {
-
-            console.log(_resultFromDatabase)
             if (_resultFromDatabase[0]) {
                 return new ErrorModel(_resultFromDatabase, errorMsg_USERQUERY)
             }
@@ -74,6 +71,21 @@ const handleUser = (req, res) => {
                 :
                 new ErrorModel(_resultFromDatabase.changedRows, errorMsg_UPDATE)
         })
+    }
+
+    if (req.method === 'GET' && req.path === '/api/user/profile') {
+        //OK 现在这个查看接口是调通了。。。//
+        console.log('hit the route..')
+        console.log(req.cookie.userId)
+
+        if (req.cookie.userId) {
+            return get(req.cookie.userId).then(_resultFromRedis => {
+                req.session = _resultFromRedis
+                if (_resultFromRedis != {}) {
+                    return new SuccessModel(_resultFromRedis, susMsg_LOGIN)
+                }
+            })
+        }
     }
 }
 
